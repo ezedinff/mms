@@ -1,9 +1,15 @@
-<form class="loginform">
-  <mat-label>Login Here</mat-label>
-  <mat-form-field class="input-full-width" appearance="fill">
-    <input type="email" matInput placeholder="email address" >
-  </mat-form-field>
-  <mat-form-field class="input-full-width" appearance="fill">
-    <input type="password" matInput placeholder="password" >
-  </mat-form-field>
-</form>
+ <div class="col-md-12">
+  <form class="loginform" [formGroup]="loginform">
+    <mat-label>Login Here</mat-label>
+    <mat-form-field class="input-full-width" appearance="fill">
+      <input type="email" [formControlName]="'username'" matInput placeholder="email address" >
+    </mat-form-field>
+    <mat-form-field class="input-full-width" appearance="fill">
+      <input type="password" [formControlName]="'password'" matInput placeholder="password" >
+    </mat-form-field>
+    <button mat-button color="primary" [disabled]="loginform.invalid">Login</button>
+    <!-- <a [routerLink]="['/login']">Forgot Password</a> -->
+  </form>
+ </div>
+
+  
