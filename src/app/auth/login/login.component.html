@@ -1,15 +1,21 @@
- <div class="col-md-12">
-  <form class="loginform" [formGroup]="loginform">
-    <mat-label>Login Here</mat-label>
-    <mat-form-field class="input-full-width" appearance="fill">
-      <input type="email" [formControlName]="'username'" matInput placeholder="email address" >
+<div class="container">
+  <mat-card-content>
+    <img
+    id="profile-img"
+    src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+   <form class="login-form">
+    <mat-label><h2>Login Here</h2></mat-label>
+    <mat-form-field class="login-input" appearance="fill">
+      <input type="email" matInput [formControlName]="'username'" placeholder="xxxyyyy@gmail.com">
     </mat-form-field>
-    <mat-form-field class="input-full-width" appearance="fill">
-      <input type="password" [formControlName]="'password'" matInput placeholder="password" >
+    <mat-form-field class="login-input" appearance="fill">
+      <input type="password" matInput [formControlName]="'password'" placeholder="password">
     </mat-form-field>
-    <button mat-button color="primary" [disabled]="loginform.invalid">Login</button>
-    <!-- <a [routerLink]="['/login']">Forgot Password</a> -->
+    <button mat-button color="primary" [disabled]="!loginform.invalid">Login</button>
+    <button mat-button color="primary" [routerLink] = "['/recoverpassword']">Forgot Password</button>
   </form>
+  </mat-card-content>
  </div>
+ 
 
   
