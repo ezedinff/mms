@@ -14,7 +14,7 @@
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	background-color: darkgrey;
+	/* background-color: darkgrey; */
 	border: 30px solid rgb(4, 3, 59);
 
  }
