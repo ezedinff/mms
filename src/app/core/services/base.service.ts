@@ -71,7 +71,7 @@ export abstract class BaseService<T> {
 
   updateOne(
     item: Partial<Omit<T, 'id'>>,
-    customPath?: string,
+    customPath?: string,                      
     id?: string
   ): Observable<T> {
     return this.httpClient

@@ -23,6 +23,8 @@ export class SampleComponent implements OnInit {
   ngOnInit(): void {
     this.sampleHttpService
       .findAll('http://localhost:3000/elements')
+
+      
       .subscribe((r) => console.log(r));
   }
 }

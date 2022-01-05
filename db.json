@@ -140,6 +140,39 @@
       "weight": 66,
       "symbol": "Ca",
       "id": 3
+    },
+    {
+      "position": 4,
+      "name": "Argon",
+      "weight": 1.0025,
+      "symbol": "Ar",
+      "id": 4
+    }
+  ],
+  "notifies": [
+    {
+      "weapon_type": "dfsgdg",
+      "quantity": 7,
+      "weapon_name": "fdfd",
+      "description": "fddggfd",
+      "document_attachment": "",
+      "id": 5
+    },
+    {
+      "weapon_type": "ማክሮቭ",
+      "quantity": 5,
+      "weapon_name": "ሽጉጥ",
+      "description": "this is to notify new import of weapon material is behind you",
+      "document_attachment": "",
+      "id": 6
+    },
+    {
+      "type": "xxx weapon type",
+      "quantity": 5,
+      "name": "xxx weapon",
+      "description": "how is it?",
+      "document_attachment": "",
+      "id": 7
     }
   ]
 }
