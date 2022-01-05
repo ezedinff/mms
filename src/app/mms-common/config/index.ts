@@ -15,7 +15,7 @@ export const   menus: Array<Menu> = [
       {
         name: "Notify Weapon",
         icon: "",
-        link: "notify",
+        link: "notifies",
         open: false
       },
       {

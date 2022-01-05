@@ -11,9 +11,11 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Form } from '../../models/form';
+import {Router} from "@angular/router";
+import {CrudHttpService} from "../form-dialog/crudHttp.service";
 export interface Action {
   name: string;
-  type: 'expand' | 'edit' | 'delete';
+  type: 'expand' | 'edit' | 'delete' |'create';
   path?: string; // if expand we redirect the user to detail page. For example: if path = 'post' and item id = 2 => /post/2
 }
 @Component({
@@ -41,7 +43,10 @@ export class TableComponent implements OnInit, AfterViewInit {
 
   actionTitle = 'Create';
 
-  constructor(public dialog: MatDialog, private httpClient: HttpClient) {}
+  constructor(public dialog: MatDialog,
+              private httpClient: HttpClient,
+              private router : Router,
+              private crudService: CrudHttpService) {}
 
   async ngOnInit() {
     this.loading = true;
@@ -69,10 +74,10 @@ export class TableComponent implements OnInit, AfterViewInit {
       console.log(result);
     });
   }
-  command(actionType: 'create' | 'expand' | 'edit' | 'delete', row: any) {
+  command(action: Action, row: any) {
     // TODO: pass the command to parent template or page
-    console.log(actionType, row);
-    if (actionType === 'edit') {
+    console.log(action.type, row);
+    if (action.type === 'edit') {
       const tempForm = { ...this.form };
       tempForm.elements = this.form.elements.map((element) => {
         element.defaultValue = row[element.name];
@@ -82,14 +87,20 @@ export class TableComponent implements OnInit, AfterViewInit {
         'Update',
         tempForm,
         `${this.dataSourceUrl}/${row['id']}`,
-        actionType
+        action.type
       );
     }
 
-    if (actionType === 'create') {
-      const tempForm = { ...this.form };
-      this.openDialog('Create', tempForm, this.dataSourceUrl, actionType);
-    }
+    if (action.type === 'expand')
+      this.router.navigate([action.path+row.id]);
+
+    if (action.type === 'delete')
+      this.crudService.deleteOne(row.id, this.dataSourceUrl).subscribe();
+  }
+
+  create(){
+    const tempForm = { ...this.form };
+    this.openDialog('Create', tempForm, this.dataSourceUrl, 'create');
   }
 
   getColumns(

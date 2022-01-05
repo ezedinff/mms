@@ -5,7 +5,7 @@
           color="primary">
     <mat-icon>filter_list</mat-icon>
   </button>
-  <button mat-button color="primary" (click)="command('create', undefined)">
+  <button mat-button color="primary" (click)="create()">
     <mat-icon>add</mat-icon>
     Create New
   </button>
@@ -35,7 +35,7 @@
         </button>
         <mat-menu #menu="matMenu" xPosition="before">
           <ng-container *ngFor="let action of actions">
-            <button mat-menu-item (click)="command(action.type, row)">{{action.name}}</button>
+            <button mat-menu-item (click)="command(action, row)">{{action.name}}</button>
           </ng-container>
         </mat-menu>
       </ng-container>
