@@ -151,28 +151,16 @@
   ],
   "notifies": [
     {
-      "weapon_type": "dfsgdg",
-      "quantity": 7,
-      "weapon_name": "fdfd",
-      "description": "fddggfd",
-      "document_attachment": "",
-      "id": 5
-    },
-    {
-      "weapon_type": "ማክሮቭ",
-      "quantity": 5,
-      "weapon_name": "ሽጉጥ",
-      "description": "this is to notify new import of weapon material is behind you",
-      "document_attachment": "",
-      "id": 6
-    },
-    {
-      "type": "xxx weapon type",
-      "quantity": 5,
-      "name": "xxx weapon",
-      "description": "how is it?",
-      "document_attachment": "",
-      "id": 7
+      "singleData": [
+        {
+          "type": "xxx weapon type",
+          "quantity": 4,
+          "name": "xxx weapon"
+        }
+      ],
+      "description": "this is to notify you that you have to import this weapon",
+      "document_attachment": "https://v2.convertapi.com/d/kcpw9n2pizgig9v09ogpr4txpc6x36cs",
+      "id": 1
     }
   ]
 }

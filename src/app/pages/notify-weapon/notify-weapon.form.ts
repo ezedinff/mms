@@ -4,6 +4,12 @@ const NotifyWeaponForm: Form = {
   title: " Weapon Notify Form",
   elements: [
     {
+      name: "singleData",
+      type: "formArray",
+      placeholder: "single data input",
+      defaultValue: "",
+      formArrayItems: [
+    {
       name: "type",
       type: "text",
       size: 4,
@@ -27,6 +33,7 @@ const NotifyWeaponForm: Form = {
         defaultValue: "",
         validations: [{ type: 'required', value: true }],
       },
+    ]},
     
     {
         name: "description",
