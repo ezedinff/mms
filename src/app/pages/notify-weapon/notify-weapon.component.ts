@@ -12,14 +12,13 @@ export class NotifyWeaponComponent implements OnInit {
 
   form = NotifyWeaponForm;
   url = "http://localhost:3000/notifies";
-  // url = "https://jsonplaceholder.typicode.com/todos";
-  // url = "https://jsonplaceholder.typicode.com/posts";
+  excludeColumns = ['id','SingleData'];
+
+
   actions: Array<Action> = [
     {name: 'Expand', type: 'expand', path: 'notify'},
     {name: 'Edit', type: 'edit'}
                        ]
-   excludeColumns = ['id','SingleData'];
-
   constructor(private notifyService: NotifyService) { }
 
   ngOnInit(): void {
