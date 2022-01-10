@@ -18,6 +18,8 @@ export class BasicComponent implements OnInit {
   actions!: Array<Action>;
 
   @Input() excludedColumns!: Array<string>;
+
+  @Input() childUrl!: string;
   constructor() {}
 
   ngOnInit(): void {}

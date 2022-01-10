@@ -17,7 +17,7 @@ const notifyDetailForm: Form = {
       validations: [{ type: 'required', value: true }],
     },
     {
-      name: 'name',
+      name: "name",
       type: "select",
       placeholder: "name",
       defaultValue: "",

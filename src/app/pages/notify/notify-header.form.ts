@@ -14,7 +14,7 @@ const notifyHeaderForm: Form = {
           type: "select",
           placeholder: "type",
           defaultValue: "",
-          size: 5,
+          size: 4,
           options: [
             {value: "Weapon", label: "Weapon"},
             {value: "Bullet", label: "Bullet"},
@@ -23,11 +23,11 @@ const notifyHeaderForm: Form = {
           validations: [{ type: 'required', value: true }],
         },
         {
-          name: 'name',
+          name: "name",
           type: "select",
           placeholder: "name",
           defaultValue: "",
-          size: 5,
+          size: 4,
           refer: "type",
           options: [
             {value: "ክላሽ ጠብመንጃ", label: "ክላሽ ጠብመንጃ", referredValue: "Weapon"},
@@ -47,7 +47,7 @@ const notifyHeaderForm: Form = {
         {
           name: "quantity",
           type: "number",
-          size: 2,
+          size: 4,
           placeholder: "Quantity",
           defaultValue: "",
           validations: [{ type: 'required', value: true }],

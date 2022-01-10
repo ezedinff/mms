@@ -11,6 +11,7 @@ export class NotifyHeaderComponent implements OnInit {
 
   form = notifyHeaderForm;
   url = 'http://localhost:3000/notifies';
+  childUrl = 'http://localhost:3000/notifyitems';
 
   actions: Array<Action> = [
     { name: 'Expand', type: 'expand', path: 'admin/notifies/' },

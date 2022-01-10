@@ -18,7 +18,7 @@ export class NotifyDetailComponent implements OnInit {
     { name: 'Edit', type: 'edit' },
     { name: 'Delete', type: 'delete' }
   ];
-  excludeColumns = ['id','notifyId'];
+  excludeColumns = ['id','parentId'];
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {

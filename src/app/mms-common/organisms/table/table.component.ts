@@ -38,6 +38,7 @@ export class TableComponent implements OnInit, AfterViewInit {
   @Input() dataSourceUrl!: string;
   @Input() actions!: Array<Action>;
   @Input() excludedColumns!: Array<string>;
+  @Input() childUrl!: string;
   pageSize = 5;
   dataSource = new MatTableDataSource<any>(this.data);
 
@@ -56,7 +57,8 @@ export class TableComponent implements OnInit, AfterViewInit {
     actionTitle: string,
     form: Form,
     dataSourceUrl: string,
-    actionType: 'create' | 'expand' | 'edit' | 'delete'
+    actionType: 'create' | 'expand' | 'edit' | 'delete',
+    childUrl:string=''
   ) {
     const dialogRef = this.dialog.open(FormDialogComponent, {
       width: '75%',
@@ -67,6 +69,7 @@ export class TableComponent implements OnInit, AfterViewInit {
         form: form,
         dataSourceUrl: dataSourceUrl,
         actionType: actionType,
+        childUrl:childUrl
       },
     });
     dialogRef.afterClosed().subscribe(async (result) => {
@@ -87,7 +90,8 @@ export class TableComponent implements OnInit, AfterViewInit {
         'Update',
         tempForm,
         `${this.dataSourceUrl}/${row['id']}`,
-        action.type
+        action.type,
+        this.childUrl
       );
     }
 
@@ -100,7 +104,7 @@ export class TableComponent implements OnInit, AfterViewInit {
 
   create(){
     const tempForm = { ...this.form };
-    this.openDialog('Create', tempForm, this.dataSourceUrl, 'create');
+    this.openDialog('Create', tempForm, this.dataSourceUrl, 'create',this.childUrl);
   }
 
   getColumns(
