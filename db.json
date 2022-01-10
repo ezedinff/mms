@@ -161,6 +161,30 @@
       "description": "this is to notify you that you have to import this weapon",
       "document_attachment": "https://v2.convertapi.com/d/kcpw9n2pizgig9v09ogpr4txpc6x36cs",
       "id": 1
+    },
+    {
+      "singleData": [
+        {
+          "type": "ማክሮቭ",
+          "quantity": 7,
+          "name": "ሽጉጥ"
+        }
+      ],
+      "description": "how is it?",
+      "document_attachment": "https://v2.convertapi.com/d/wbye45pusza8wjtvy0f8o5hio8qf8nor",
+      "id": 2
+    },
+    {
+      "singleData": [
+        {
+          "type": "xxxWeapon",
+          "quantity": 4,
+          "name": "xxxWeapon"
+        }
+      ],
+      "description": "how is it",
+      "document_attachment": "https://v2.convertapi.com/d/0ibxbizkkxdx4a793rk2s7tx726us16z",
+      "id": 3
     }
   ]
 }

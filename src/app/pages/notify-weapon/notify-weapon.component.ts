@@ -13,7 +13,7 @@ export class NotifyWeaponComponent implements OnInit {
   form = NotifyWeaponForm;
   url = "http://localhost:3000/notifies";
   
-  excludeColumns = ['id'];
+  excludeColumns = ['description'];
 
 
   actions: Array<Action> = [
