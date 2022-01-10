@@ -18,6 +18,7 @@ export class SampleComponent implements OnInit {
     { name: 'Edit', type: 'edit' },
   ];
   path = '/elements';
+
   constructor(private sampleHttpService: SampleHttpService) {}
 
   ngOnInit(): void {

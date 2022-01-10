@@ -17,11 +17,12 @@ export class NotifyWeaponComponent implements OnInit {
   actions: Array<Action> = [
     {name: 'Expand', type: 'expand', path: 'notify'},
     {name: 'Edit', type: 'edit'}
-  ]
+                       ]
+   excludeColumns = ['id','SingleData'];
+
   constructor(private notifyService: NotifyService) { }
 
   ngOnInit(): void {
-    this.notifyService.findAll('http://localhost:3000/notifies');
+    this.notifyService.findAll(this.url);
   }
-
 }
