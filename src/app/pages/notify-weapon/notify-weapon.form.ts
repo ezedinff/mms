@@ -38,7 +38,7 @@ const NotifyWeaponForm: Form = {
           refer: "type",
           options: [
             {value: "xxxWeapon", label: "xxx weapon", referredValue: "xxxWeapon" },
-            {value: "xyzWeapon", label: "xyz weapon", referredValue: "xxxWeapon"},
+            {value: "xyzWeapon", label: "xyz weapon", referredValue: "xxxWe apon"},
             {value: "yyyWeapon", label: "yyy weapon", referredValue: "yyyWeapon"},
             {value: "ykzWeapon", label: "ykz weapon", referredValue: "yyyWeapon"},
           ],

@@ -13,12 +13,12 @@ export class NotifyWeaponComponent implements OnInit {
   form = NotifyWeaponForm;
   url = "http://localhost:3000/notifies";
   
-  excludeColumns = ['description'];
+  excludeColumns = ['id','singleData'];
 
 
   actions: Array<Action> = [
     {name: 'Expand', type: 'expand', path: 'notify'},
-    {name: 'Edit', type: 'edit'}
+    {name: 'Edit', type: 'edit'},
                        ]
   constructor(private notifyService: NotifyService) { }
 

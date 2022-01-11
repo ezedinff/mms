@@ -153,12 +153,12 @@
     {
       "singleData": [
         {
-          "type": "xxx weapon type",
-          "quantity": 4,
-          "name": "xxx weapon"
+          "type": "xxxWeapon",
+          "quantity": 2,
+          "name": "xxxWeapon"
         }
       ],
-      "description": "this is to notify you that you have to import this weapon",
+      "description": "this is to notify you that you have to import this weapon?",
       "document_attachment": "https://v2.convertapi.com/d/kcpw9n2pizgig9v09ogpr4txpc6x36cs",
       "id": 1
     },
@@ -178,11 +178,11 @@
       "singleData": [
         {
           "type": "xxxWeapon",
-          "quantity": 4,
-          "name": "xxxWeapon"
+          "quantity": 5,
+          "name": "xyzWeapon"
         }
       ],
-      "description": "how is it",
+      "description": "is it properly working??",
       "document_attachment": "https://v2.convertapi.com/d/0ibxbizkkxdx4a793rk2s7tx726us16z",
       "id": 3
     }
