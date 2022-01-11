@@ -19,5 +19,6 @@ app.db = router.db
 
 // You must apply the auth middleware before the router
 app.use(auth)
+app.use(jsonServer.rewriter({'/notifies/:parentId/notifyitems/:itemId':'/notifyitems/:itemId'}));
 app.use(router)
 app.listen(3000, () => console.log("port is listening at port 3000..."));

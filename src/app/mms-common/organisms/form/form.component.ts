@@ -77,6 +77,7 @@ export class FormComponent implements OnInit {
     const elementPath = formArray
       ? `${formArray}.${index || '0'}.${formElement.name}`
       : formElement.name;
+    pathOfRefer && this.mmsForm.get(pathOfRefer) && this.mmsForm.get(pathOfRefer)?.patchValue(this.mmsForm.get(pathOfRefer)?.value);
     const result =
       pathOfRefer && this.mmsForm.get(pathOfRefer)
         ? this.mmsForm.get(pathOfRefer)?.valueChanges.pipe(

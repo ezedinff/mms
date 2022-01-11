@@ -141,5 +141,94 @@
       "symbol": "Ca",
       "id": 3
     }
+  ],
+  "notifies": [
+    {
+      "id": 1,
+      "description": "new",
+      "document_attachment": "https://v2.convertapi.com/d/854tzpz8u3g5p3f7we5hz02y42uccrjk"
+    },
+    {
+      "id": 2,
+      "description": "trys2",
+      "document_attachment": null
+    },
+    {
+      "description": "wqqw",
+      "document_attachment": "",
+      "id": 3
+    }
+  ],
+  "notifyitems": [
+    {
+      "type": "Weapon",
+      "name": "ካኑኒ ኤስ ሽጉጥ",
+      "quantity": 10,
+      "id": 1,
+      "parentId": "1"
+    },
+    {
+      "type": "Other",
+      "name": "የውሃ ኮዳ",
+      "quantity": 15,
+      "id": 2,
+      "parentId": "2"
+    },
+    {
+      "type": "Weapon",
+      "name": "ማካሮቭ",
+      "quantity": 20,
+      "id": 3,
+      "parentId": "2"
+    },
+    {
+      "type": "Bullet",
+      "name": "ክላሽ ጠብመንጃ ካርታ",
+      "quantity": 15,
+      "id": 4,
+      "parentId": "1"
+    },
+    {
+      "type": "Bullet",
+      "name": "የቶካሮቭ ሽጉጥ ካርታ",
+      "quantity": 25,
+      "id": 5,
+      "parentId": "2"
+    },
+    {
+      "type": "Other",
+      "name": "የእጅ ካቴና",
+      "quantity": 20,
+      "id": 7,
+      "parentId": "1"
+    },
+    {
+      "type": "Other",
+      "name": "የውሃ ኮዳ",
+      "quantity": 35,
+      "id": 8,
+      "parentId": "2"
+    },
+    {
+      "type": "Other",
+      "name": "የውሃ ኮዳ",
+      "quantity": 2500,
+      "parentId": "2",
+      "id": 9
+    },
+    {
+      "type": "Bullet",
+      "name": "የቶካሮቭ ሽጉጥ ካርታ",
+      "quantity": 23,
+      "parentId": 3,
+      "id": 10
+    },
+    {
+      "type": "Bullet",
+      "name": "የቶካሮቭ ሽጉጥ ካርታ",
+      "quantity": 2332,
+      "parentId": 3,
+      "id": 11
+    }
   ]
 }

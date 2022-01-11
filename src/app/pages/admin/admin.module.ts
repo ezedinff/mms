@@ -15,8 +15,8 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: 'notify',
-        loadChildren: () => import('../sample/sample.module').then(m => m.SampleModule)
+        path: 'notifies',
+        loadChildren: () => import('../notify/notify.module').then(m => m.NotifyModule)
       },
       {
         path: 'dashboard',
