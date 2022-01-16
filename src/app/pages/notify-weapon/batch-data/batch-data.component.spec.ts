@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NotifyWeaponComponent } from './notify-weapon.component';
+import { BatchDataComponent } from './batch-data.component';
 
-describe('NotifyWeaponComponent', () => {
-  let component: NotifyWeaponComponent;
-  let fixture: ComponentFixture<NotifyWeaponComponent>;
+describe('BatchDataComponent', () => {
+  let component: BatchDataComponent;
+  let fixture: ComponentFixture<BatchDataComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NotifyWeaponComponent ]
+      declarations: [ BatchDataComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NotifyWeaponComponent);
+    fixture = TestBed.createComponent(BatchDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

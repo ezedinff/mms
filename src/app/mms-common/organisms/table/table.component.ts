@@ -94,7 +94,7 @@ export class TableComponent implements OnInit, AfterViewInit {
 
   getColumns(
     data: Array<any>,
-    excluded: Array<string> = ['created_at', 'updated_at'],
+    excluded: Array<string> = ['created_at', 'updated_at','id'],
     actionsAvailable: boolean
   ) {
     let columns = data

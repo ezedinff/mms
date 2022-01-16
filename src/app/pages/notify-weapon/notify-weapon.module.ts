@@ -4,12 +4,16 @@ import { NotifyWeaponComponent } from './notify-weapon.component';
 import { MmsCommonModule } from 'src/app/mms-common/mms-common.module';
 import { RouterModule } from '@angular/router';
 import { NotifyService } from './notify.service';
+import { BatchDataComponent } from './batch-data/batch-data.component';
+import { SpecificDataComponent } from './specific-data/specific-data.component';
 
 
 
 @NgModule({
   declarations: [
-    NotifyWeaponComponent
+    NotifyWeaponComponent,
+    BatchDataComponent,
+    SpecificDataComponent
   ],
   imports: [
   CommonModule,
