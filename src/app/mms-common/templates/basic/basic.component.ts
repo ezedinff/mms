@@ -16,6 +16,7 @@ export class BasicComponent implements OnInit {
 
   @Input()
   actions!: Array<Action>;
+  
   constructor() {}
 
   ngOnInit(): void {}

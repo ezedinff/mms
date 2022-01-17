@@ -18,11 +18,14 @@ export class SampleComponent implements OnInit {
     { name: 'Edit', type: 'edit' },
   ];
   path = '/elements';
+
   constructor(private sampleHttpService: SampleHttpService) {}
 
   ngOnInit(): void {
     this.sampleHttpService
       .findAll('http://localhost:3000/elements')
+
+      
       .subscribe((r) => console.log(r));
   }
 }
