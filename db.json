@@ -153,62 +153,36 @@
     {
       "singleData": [
         {
-          "type": "xxxWeapon",
+          "type": "yyyWeapon",
           "quantity": 2,
-          "name": "xxxWeapon"
+          "name": "yyyWeapon"
+        },
+        {
+          "type": "yyyWeapon",
+          "quantity": 4,
+          "name": "ykzWeapon"
         }
       ],
-      "description": "this is to notify you that you have to import this weapon?",
-      "document_attachment": "https://v2.convertapi.com/d/kcpw9n2pizgig9v09ogpr4txpc6x36cs",
-      "id": 1
+      "description": "is it working?",
+      "document_attachment": "https://v2.convertapi.com/d/qtceud5xnl3d0um1cfyj8vdcntnjubpi",
+      "id": 6
     },
     {
       "singleData": [
         {
-          "type": "ማክሮቭ",
-          "quantity": 7,
-          "name": "ሽጉጥ"
-        }
-      ],
-      "description": "how is it?",
-      "document_attachment": "https://v2.convertapi.com/d/wbye45pusza8wjtvy0f8o5hio8qf8nor",
-      "id": 2
-    },
-    {
-      "singleData": [
-        {
-          "type": "xxxWeapon",
+          "type": "yyyWeapon",
           "quantity": 5,
-          "name": "xyzWeapon"
-        }
-      ],
-      "description": "is it properly working??",
-      "document_attachment": "https://v2.convertapi.com/d/0ibxbizkkxdx4a793rk2s7tx726us16z",
-      "id": 3
-    },
-    {
-      "singleData": [
+          "name": "yyyWeapon"
+        },
         {
-          "type": "xxxWeapon",
-          "quantity": 4,
-          "name": "xxxWeapon"
+          "type": "yyyWeapon",
+          "quantity": 8,
+          "name": "ykzWeapon"
         }
       ],
-      "description": "retry",
-      "document_attachment": "https://v2.convertapi.com/d/kcpw9n2pizgig9v09ogpr4txpc6x36cs",
-      "id": 4
-    },
-    {
-      "singleData": [
-        {
-          "type": "xxxWeapon",
-          "quantity": 4,
-          "name": "xxxWeapon"
-        }
-      ],
-      "description": "retry",
-      "document_attachment": "https://v2.convertapi.com/d/kcpw9n2pizgig9v09ogpr4txpc6x36cs",
-      "id": 5
+      "description": "sure it is working",
+      "document_attachment": "https://v2.convertapi.com/d/bscn0v3wvqajg7fd3hbpi5su4l2fewlq",
+      "id": 7
     }
   ]
 }

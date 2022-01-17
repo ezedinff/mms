@@ -10,5 +10,6 @@ export class NotifyService extends BaseService<Notify> {
 
   constructor(public httpClient: HttpClient) {
     super(httpClient, '/notifies');
+
   }
 }

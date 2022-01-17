@@ -17,7 +17,8 @@ import { SpecificDataComponent } from './specific-data/specific-data.component';
   CommonModule,
     MmsCommonModule,
     RouterModule.forChild([
-      {path: '', component: BatchDataComponent}
+      {path: '', component: BatchDataComponent},
+      {path:'details',component:SpecificDataComponent}
     ])
   ],
   providers: [NotifyService],

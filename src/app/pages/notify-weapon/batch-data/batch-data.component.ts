@@ -13,12 +13,13 @@ export class BatchDataComponent implements OnInit {
   form = NotifyWeaponForm;
   url = "http://localhost:3000/notifies";
   
-  excludeColumns = ['id','singleData'];
-
+  activatedRoutes!: string;
 
   actions: Array<Action> = [
-    {name: 'Expand', type: 'expand', path: 'notify'},
-    {name: 'Edit', type: 'edit'},
+    { name: 'Expand', type: 'expand', path: 'details'},
+    { name: 'Edit', type: 'edit'},
+    { name: 'Delete', type: 'delete'}
+
                        ]
   constructor(private notifyService: NotifyService) { }
 

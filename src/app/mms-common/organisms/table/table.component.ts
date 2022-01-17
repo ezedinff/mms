@@ -11,6 +11,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Form } from '../../models/form';
+import { Router, ActivatedRoute } from '@angular/router';
+import { CrudHttpService } from '../form-dialog/crudHttp.service';
 export interface Action {
   name: string;
   type: 'expand' | 'edit' | 'delete';
@@ -36,12 +38,16 @@ export class TableComponent implements OnInit, AfterViewInit {
   @Input() dataSourceUrl!: string;
   @Input() actions!: Array<Action>;
   @Input() excludedColumns!: Array<string>;
+
+  @Input() activateRoutes!:string
+
   pageSize = 5;
   dataSource = new MatTableDataSource<any>(this.data);
 
   actionTitle = 'Create';
 
-  constructor(public dialog: MatDialog, private httpClient: HttpClient) {}
+  constructor(public dialog: MatDialog, private httpClient: HttpClient,private router : Router,
+    private crudService: CrudHttpService) {}
 
   async ngOnInit() {
     this.loading = true;
@@ -90,11 +96,16 @@ export class TableComponent implements OnInit, AfterViewInit {
       const tempForm = { ...this.form };
       this.openDialog('Create', tempForm, this.dataSourceUrl, actionType);
     }
+    if (actionType === 'expand')
+      this.router.navigate([this.activateRoutes]);
+
+    if (actionType === 'delete')
+      this.crudService.deleteOne(row.id, this.dataSourceUrl).subscribe();
   }
 
   getColumns(
     data: Array<any>,
-    excluded: Array<string> = ['created_at', 'updated_at','id'],
+    excluded: Array<string> = ['created_at', 'updated_at','id','singleData'],
     actionsAvailable: boolean
   ) {
     let columns = data
