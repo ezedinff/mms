@@ -7,9 +7,10 @@ import { RequestDetailComponent } from './request-detail/request-detail.componen
 import { MatTabsModule } from '@angular/material/tabs';
 import { ApprovesComponent } from './approves/approves.component';
 import { ApproveDetailComponent } from './approve-detail/approve-detail.component';
+import { UserinfoComponent } from './userinfo/userinfo.component';
 
 @NgModule({
-  declarations: [RequestsComponent, RequestDetailComponent, ApprovesComponent, ApproveDetailComponent],
+  declarations: [RequestsComponent, RequestDetailComponent, ApprovesComponent, ApproveDetailComponent, UserinfoComponent],
   imports: [
     CommonModule,
     MmsCommonModule,
