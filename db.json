@@ -486,13 +486,77 @@
       "type": "Bullet",
       "name": "try",
       "quantity": 45,
+      "requestsId": 1,
       "id": 2
     },
     {
       "type": "Bullet",
       "name": "abe",
       "quantity": 452,
+      "requestsId": 1,
       "id": 3
+    }
+  ],
+  "approves": [
+    {
+      "approveattachments": "https://v2.convertapi.com/d/yyxb46h48x2qce953xivnssbqym62ngk",
+      "id": 1
+    }
+  ],
+  "approveitems": [
+    {
+      "type": "Weapon",
+      "name": "try",
+      "quantity": 45,
+      "approvesId": 1,
+      "id": 1
+    },
+    {
+      "type": "Bullet",
+      "name": "try",
+      "quantity": 45,
+      "id": 2,
+      "approvesId": 1
+    },
+    {
+      "type": "Bullet",
+      "name": "abe",
+      "quantity": 452,
+      "id": 3,
+      "approvesId": 1
+    }
+  ],
+  "userinfos": [
+    {
+      "id": 1,
+      "name": "mohammed",
+      "gender": "Male",
+      "phone": "0923692424",
+      "occupation": "software proframmer",
+      "birthdate": "may 18",
+      "birthplace": "bati",
+      "region": "addiababa",
+      "subcity": "nifassilk",
+      "wereda": "12",
+      "houseno": "12"
+    },
+    {
+      "name": "Mohamed Hussen",
+      "gender": "Female",
+      "phone": "+251923692424",
+      "occupation": "xsa",
+      "birthdate": "2022-02-08T21:00:00.000Z",
+      "birthplace": "xs",
+      "region": "NifasSilk, Addis Ababa",
+      "subcity": "Addis Ababa",
+      "wereda": "xsa",
+      "houseno": "xsa",
+      "closename": "xa",
+      "closesubcity": "xs",
+      "closewereda": "x",
+      "closehouse": "xa",
+      "closephone": "as",
+      "id": 2
     }
   ]
 }

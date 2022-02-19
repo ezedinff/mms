@@ -1,0 +1,135 @@
+import { Form } from 'src/app/mms-common/models/form';
+
+const userInfoForm: Form = {
+    title: 'User Information',
+    elements: [
+        {
+            name: 'name',
+            type: 'text',
+            placeholder: 'Name',
+            defaultValue: '',
+            size: 4,
+            validations: [{ type: 'required', value: true }],
+        },
+        {
+          name: 'gender',
+          type: 'select',
+          placeholder: 'Gender',
+          defaultValue: '',
+          size: 4,
+          options: [
+            { value: 'Male', label: 'Male' },
+            { value: 'Female', label: 'Female' },
+          ],
+          validations: [{ type: 'required', value: true }],
+        },
+        {
+          name: 'phone',
+          type: 'text',
+          placeholder: 'Phone Number',
+          defaultValue: '',
+          size: 4,
+          validations: [{ type: 'required', value: true }],
+        },
+        {
+          name: 'occupation',
+          type: 'text',
+          placeholder: 'Occupation',
+          defaultValue: '',
+          size: 4,
+          validations: [{ type: 'required', value: true }],
+        },
+        {
+          name: 'birthdate',
+          type: 'date',
+          placeholder: 'BirthDate',
+          defaultValue: '',
+          size: 4,
+          validations: [{ type: 'required', value: true }],
+        },
+        {
+          name: 'birthplace',
+          type: 'text',
+          placeholder: 'BirthPlace',
+          defaultValue: '',
+          size: 4,
+          validations: [{ type: 'required', value: true }],
+        }
+        // 
+        ,
+        {
+          name: 'region',
+          type: 'text',
+          placeholder: 'Region',
+          defaultValue: '',
+          size: 3,
+          validations: [{ type: 'required', value: true }],
+        },
+        {
+          name: 'subcity',
+          type: 'text',
+          placeholder: 'Subcity',
+          defaultValue: '',
+          size: 3,
+          validations: [{ type: 'required', value: true }],
+        },
+        {
+          name: 'wereda',
+          type: 'text',
+          placeholder: 'Wereda',
+          defaultValue: '',
+          size: 3,
+          validations: [{ type: 'required', value: true }],
+        },
+        {
+          name: 'houseno',
+          type: 'text',
+          placeholder: 'House No',
+          defaultValue: '',
+          size: 3,
+          validations: [{ type: 'required', value: true }],
+        },
+        {
+          name: 'closename',
+          type: 'text',
+          placeholder: 'Close Friend Name',
+          defaultValue: '',
+          size: 6,
+          validations: [{ type: 'required', value: true }],
+        },
+        {
+          name: 'closesubcity',
+          type: 'text',
+          placeholder: 'Close Friend Subcity',
+          defaultValue: '',
+          size: 6,
+          validations: [{ type: 'required', value: true }],
+        },
+        {
+          name: 'closewereda',
+          type: 'text',
+          placeholder: 'Close Friend Wereda',
+          defaultValue: '',
+          size: 4,
+          validations: [{ type: 'required', value: true }],
+        },
+        {
+          name: 'closehouse',
+          type: 'text',
+          placeholder: 'Close Friend House No',
+          defaultValue: '',
+          size: 4,
+          validations: [{ type: 'required', value: true }],
+        },
+        {
+          name: 'closephone',
+          type: 'text',
+          placeholder: 'Close Friend Phone No',
+          defaultValue: '',
+          size: 4,
+          validations: [{ type: 'required', value: true }],
+        }
+    
+    ],
+  };
+  export default userInfoForm;

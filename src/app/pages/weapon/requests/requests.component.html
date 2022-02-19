@@ -9,9 +9,21 @@
         </ng-template>
     </mat-tab>
 
-    <mat-tab [label]="'Request For Returning Weapon'">
+    <mat-tab [label]="'Request Approval'">
         <ng-template matTabContent>
-            <h4>View Approved Request</h4>
+            <app-approves ></app-approves>
+        </ng-template>
+    </mat-tab>
+
+    <mat-tab [label]="'Distributed Request'">
+        <ng-template matTabContent>
+            <h4>Distribute Request</h4>
+        </ng-template>
+    </mat-tab>
+
+    <mat-tab [label]="'User Info'">
+        <ng-template matTabContent>
+            <app-userinfo></app-userinfo>
         </ng-template>
     </mat-tab>
 </mat-tab-group>
