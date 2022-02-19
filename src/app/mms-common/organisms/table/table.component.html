@@ -1,14 +1,25 @@
-<mat-toolbar class="mat-elevation-z1 table-header">
-  <button mat-icon-button
-          matTooltip="Filter"
-          aria-label="Filter the table"
-          color="primary">
-    <mat-icon>filter_list</mat-icon>
-  </button>
-  <button mat-button color="primary" (click)="command('create', undefined)">
-    <mat-icon>add</mat-icon>
-    Create New
-  </button>
+<ng-container *ngIf="(tableState$ | async) as tableState"> 
+  <mat-toolbar class="mat-elevation-z1 table-header">
+    <div class="table-header-title">
+        <h1>{{tableState?.title}}</h1>
+    </div>
+    <div class="table-header-actions">
+        <button mat-icon-button>
+            <mat-icon>refresh</mat-icon>
+        </button>
+
+        <button mat-icon-button
+        matTooltip="Filter"
+        aria-label="Filter the table"
+        color="primary">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+
+        <button mat-button color="primary" (click)="command('create', undefined)">
+          <mat-icon>add</mat-icon>
+          Create New
+        </button>
+    </div>
 </mat-toolbar>
 <div *ngIf="loading" style="display: flex; justify-content: center; padding: 24px">
   <mat-progress-spinner
@@ -34,7 +45,7 @@
           <mat-icon>more_horiz</mat-icon>
         </button>
         <mat-menu #menu="matMenu" xPosition="before">
-          <ng-container *ngFor="let action of actions">
+          <ng-container *ngFor="let action of tableState?.actions">
             <button mat-menu-item (click)="command(action.type, row)">{{action.name}}</button>
           </ng-container>
         </mat-menu>
@@ -49,3 +60,5 @@
                showFirstLastButtons
                aria-label="Select page">
 </mat-paginator>
+
+</ng-container>

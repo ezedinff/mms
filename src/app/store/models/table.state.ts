@@ -13,6 +13,7 @@ export interface RelationShip {
 
 export interface TableState {
   id?: string;
+  title?: string;
   data?: any[];
   pageNumber: number;
   pageSize: number;
@@ -21,4 +22,7 @@ export interface TableState {
   relations?: RelationShip[];
   links?: ResourceLinks;
   actions?: Action[];
+  childOf?: {
+    [key: string]: number;
+  };
 }
