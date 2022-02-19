@@ -9,9 +9,9 @@
         </ng-template>
     </mat-tab>
 
-    <mat-tab [label]="'Request Status'">
+    <mat-tab [label]="'Request Approval'" [routerLink]="['/user/bob']">
         <ng-template matTabContent>
-            <h4>View Approved Request</h4>
+            <app-approves ></app-approves>
         </ng-template>
     </mat-tab>
 

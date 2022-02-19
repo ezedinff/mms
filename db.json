@@ -466,13 +466,44 @@
       "type": "Bullet",
       "name": "try",
       "quantity": 45,
+      "requestsId": 1,
       "id": 2
     },
     {
       "type": "Bullet",
       "name": "abe",
       "quantity": 452,
+      "requestsId": 1,
       "id": 3
+    }
+  ],
+  "approves": [
+    {
+      "approveattachments": "https://v2.convertapi.com/d/yyxb46h48x2qce953xivnssbqym62ngk",
+      "id": 1
+    }
+  ],
+  "approveitems": [
+    {
+      "type": "Weapon",
+      "name": "try",
+      "quantity": 45,
+      "approvesId": 1,
+      "id": 1
+    },
+    {
+      "type": "Bullet",
+      "name": "try",
+      "quantity": 45,
+      "id": 2,
+      "approvesId": 1
+    },
+    {
+      "type": "Bullet",
+      "name": "abe",
+      "quantity": 452,
+      "id": 3,
+      "approvesId": 1
     }
   ]
 }
