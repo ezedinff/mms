@@ -9,67 +9,104 @@
             "password": "የይለፍ ቃል"
         },
         "footer": {
-            "forgotPassword": "የይለፍ ቃልዎን ረስተውታል?",
-            "noAccount": "የአካውንት መግቢያ የለም?",
-            "signUp": "መግቢያ",
+            "forgotPassword": "የይለፍ ቃልዎን ረስተዋል?",
+            "noAccount": " የመግቢያ ቁልፍ የለም?",
+            "signUp": "መመዝገቢያ",
             "text1": "በጀግንነት መጠበቅ",
             "text2": "በሰብዓዊነት ማገልገል"
-        }
-    },
-
+        },
 
 
     "menus": {
-        "dashboard": "ደሽ ቦርድ",
-        "Weapon": "የጦር መሳሪያ",
-        "Notify Weapon": "የጦር መሳሪያ ማሰወቅ",
-        "Inventory": "እቃ መከማችቻ",
-        "Request": "የጦር መሳሪያ መጠየቅ",
-        "Report Damages":"የሚወገዱ ጦር መሳሪያዎች",
-        "User Management":"የተጠቃሚ አስተዳደር"
-    },
+      "Dashboard": "ዳሽ ቦርድ",
+      "Weapon": "የጦር መሳሪያ",
+      "Notify Weapon": "የጦር መሳሪያ ማሳወቅ",
+      "Inventory": "እቃ ማከማቻ",
+      "Request": "የጦር መሳሪያ መጠየቂያ",
+      "Distribute":"የጦር መሳሪያ ማከፋፈል",
+      "Report Damages":"የሚወገዱ ጦር መሳሪያዎች",
+      "User Management":"የተጠቃሚ መረጃ አስተዳደር"
+                     },
+                     "Notify Weapon": {
+                      "Notify Item" :"የጦር መሳሪያ ማሳወቂያ",
+                      "Weapon": "የጦር መሣሪያ",
+                      "Bullet" :"ጥይት",
+                      "Other":"ሌላ",
+                      "Quantity" :"ብዛት",
+                      "Weapon Description":"መግለጫ",
+                      "Attachments": "አባሪ ደብዳቤ",
+                      "List of weapons that have been notified":"የጦር መሳሪያዎች ዝርዝር"
+                     },
 
-    "elements": {
-        "Notify Item" :"በነጠላ የሚገቡ",
-        "Weapon": "የጦር መሣሪያ ዓይነት",
-        "Bullet" :"ጥይት",
-        "Other":"ሌላ",
-        "Quantity" :"ብዛት",
-        "Weapon Description":"መግለጫ",
-        "Attachments": "አባሪ ዶኩሜንት",
-        "List of weapons that have been notified":"ገቢ ኢንድደረጉ የተዘዙት የጦር መሳሪያዎች ዝርዝር",
- 
+                    "request":{
+                    "Request For Weapon": "የጦር መሳሪያ መጠየቂያ",
+                    "Request Items": "የተጠየቁ መሳሪያዎች",
+                    "Request Status": "የተጠየቁ መሳሪያዎች ሁኔታ",
+                    "Request Description": "መግለጫ",
+                    "Request Attachments": "አባሪ ዶኩሜንት",
+                    "Request Item For Weapon": "በአይነት የሚጠየቁ የጦር መሳሪያ",
+                    "Request Approval Form": "የማጽደቅ መጠየቅያ ቅጽ",
+                    "Insert Weapons to store": "የጦር መሳሪያዎች ወደ መከማቻ አስገባ",
+                    "Request For Weapons": "የጦር መሳሪያ ጠይቅ",
+                    "Request For Returning Weapon": "የጦር መሳሪያ ለመመለስ ጠይቅ",
+                    "View Approved Request": "የተጸደቁ ጥያቄ ይመልከቱ"
+                    },
 
-        "Request For Weapon": "የጦር መሳሪየ መጠየቅ",
-        "Request Items": "የተጠየቁ አይነት",
-        "Request Status": "ሁኔታ",
-        "Request Description": "መግለጫ",
-        "Request Attachments": "አባሪ ዶኩሜንት",
-        "Request Item For Weapon": "በአይነት የሚጠየቁ የጦር መሳሪያ",
-        "Request Approval Form": "የማጽደቅ መጠየቅያ ቅጽ",
-        "Insert Weapons to store": "የጦር መሳሪያዎች ወደ መከማቻ አስገባ",
-        "Request For Weapons": "የጦር መሳሪያ ጠይቅ",
-        "Request For Returning Weapon": "የጦር መሳሪያ ለመመለስ አማልክት",
-        "View Approved Request": "የተጸደቁ ጥያቄ ይመልከቱ",
-
-        "Inventory": "እቃ መከማችቻ",
-        "Item No. in Expenditure Register": "ዋገዉ በገንዘብ ወጪ መዝገብ የሳረንበት ተራ ቁጥር",
+                    "inventory": {
+                      "Inventory": "የዕቃ መጋዘን",
+        "Item No. in Expenditure Register": "ዋጋዉ በገንዘብ ወጪ መዝገብ የተጻፈበት ተራ ቁጥር",
         "No. of Entry in the Register of Incoming Goods": "በእቃ ገቢ መዝገብ የገባበት ንምራ ",
-        "Weapon Items": "የጦር መሳሪያ አይነቶች",
+        "Weapon Items": "የመሳሪያ አይነቶች",
         "Weapon Item Description'": "መግለጫ",
         "Weapon Model": "ሞዴል",
-        "Weapon Serial No.": "ሴሪ",
+        "Weapon Serial No.": "መለያ ቁጥር",
         "Weapon Quantity": "ብዛት",
-        "Weapon Unit Price": "የንዱ ዋጋ",
-        "Weapon Total Price": "የዋጋ ድምር",
+        "Weapon Unit Price": "የአንዱ ዋጋ",
+        "Weapon Total Price": "ጠቅላላ ድምር",
         "Store No.": "እቃዉ የሚቀመጥበት መጋዛን ቁጥር",
         "Shelf No.": "የመደርደሪያዉ ቁጥር",
         "Distribute Weapon": "የጦር መሳሪያ መስጠት",
         "Inventory Item": "የእቃ ዝርዝር",
-        "List Of Records In Inventory": "የተከመቹ እቃዎች ዝርዝር",
-        "View Store": "የተከመቹ እቃዎች እየው",
-        "View store grouped by type and model": "በአይነት እና በሞዴል የተከመቹ እቃዎች መየት "
+        "List Of Records In Inventory": "የተከማቹ እቃዎች ዝርዝር",
+        "View Store": "የተከማቹ እቃዎች እይ",
+        "View store grouped by type and model": "በአይነት እና በሞዴል የተከማቹ እቃዎች ማየት "
+    },
+
+    "Report Damages":{
+      "Report Damage": "",
+      "Damages Weapon": "የተጠየቁ መሳሪያዎች",
+      "Damages Weapon Type": "የተጠየቁ መሳሪያዎች ሁኔታ",
+      "Damages Weapon Name": "መግለጫ",
+      "Damages Weapon Quantity": "አባሪ ዶኩሜንት",
+      "Reason of Damages Weapon": "በአይነት የሚጠየቁ የጦር መሳሪያ",
+      "Damages Weapon Description": "የማጽደቅ መጠየቅያ ቅጽ",
+      "Attachement": "አባሪ መረጃ"
+
+  },
+
+  "Dashboard": {
+    "Dashboard": "ዳሽቦርድ",
+    "Weapon": "ጦር መሳሪያ",
+    "Notify Weapon": "ወደ መጋዘን የሚገቡ ጦር መሳሪያዎች ማሳወቅ",
+    "Inventory": "መሳሪያ ማስገባት",
+    "Request": "መሳሪያ መጠየቅ",
+    "Distribute": "መሳሪያ ማከፋፈል",
+    "Return": "መሳሪያ መመለስ",
+    "Report Damages": "የተወገዱ መሳሪያዎች",
+    "User Management": "የተጠቃሚዎች መረጃ አስተዳደር"
+  }
 
 
-    }
-}
+
+                    }
+                  }
+
+
+
+
+
+
+
+
+
+
