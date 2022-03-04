@@ -26,8 +26,7 @@
   
       "formAction": {
           "createNew": "አዲስ ፍጠር",
-          "noRecordFound": "ምንም መዝገብ አልተገኘም!",
-          "no": "ተ.ቁ"
+          "noRecordFound": "ምንም መዝገብ አልተገኘም!"
         },
 
     "menus": {
@@ -45,7 +44,8 @@
             "edit":"ማሻሻል",
             "create": "ጨምር",
             "update": "በሌላ ለመተካት",
-            "cancel": "ውጣ"           
+            "cancel": "ውጣ",
+            "add":"ጨምር"           
         },
 
     
@@ -65,6 +65,7 @@
     },
     "notifyWeapon": {
         "form": {
+        "notifyWeapon":"አዲስ የሚገቡ እቃዎች ማሳወቂያ",
         "notifyItems": "አዲስ የሚገቡ እቃዎች ዝርዝር",
         "weaponType": "የጦር መሳሪያው አይነት",
         "options":{
@@ -75,7 +76,8 @@
         "weaponName": "የጦር መሳሪያ ስም",
         "quantity": "ብዛት",        
         "weaponDescription":"መግለጫ",
-        "attachments": "አባሪ ዶኩሜንት"
+        "attachments": "አባሪ ዶኩሜንት",
+        "No": "ተ.ቁ"
         }
     },
 

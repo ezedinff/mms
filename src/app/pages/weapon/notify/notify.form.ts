@@ -1,24 +1,24 @@
 import { Form } from 'src/app/mms-common/models/form';
 const notifyItemForm: Form = {
-  title: 'Notify Item',
+  title: 'notifyWeapon.form.notifyItems',
   elements: [
     {
       name: 'weaponType',
       type: 'select',
-      placeholder: 'Weapon Type',
+      placeholder: 'notifyWeapon.form.weaponType',
       defaultValue: '',
       size: 4,
       options: [
-        { value: 'Weapon', label: 'Weapon' },
-        { value: 'Bullet', label: 'Bullet' },
-        { value: 'Other', label: 'Other' },
+        { value: 'Weapon', label: 'notifyWeapon.form.options.Weapon' },
+        { value: 'Bullet', label: 'notifyWeapon.form.options.Bullet' },
+        { value: 'Other', label: 'notifyWeapon.form.options.Other' },
       ],
       validations: [{ type: 'required', value: true }],
     },
     {
       name: 'weaponName',
       type: 'text',
-      placeholder: 'Weapon Name',
+      placeholder: 'notifyWeapon.form.weaponName',
       defaultValue: '',
       size: 4,
       validations: [{ type: 'required', value: true }],
@@ -26,7 +26,7 @@ const notifyItemForm: Form = {
     {
       name: 'quantity',
       type: 'number',
-      placeholder: 'Quantity',
+      placeholder: 'notifyWeapon.form.quantity',
       defaultValue: '',
       size: 4,
       validations: [{ type: 'required', value: true }],
@@ -34,31 +34,31 @@ const notifyItemForm: Form = {
   ],
 };
 const notifyForm: Form = {
-  title: 'Notify Weapon',
+  title: 'notifyWeapon.form.notifyWeapon',
   elements: [
     {
       name: 'notifyItems',
       type: 'formArray',
-      placeholder: 'Notify Items',
+      placeholder: 'notifyWeapon.form.notifyItems',
       defaultValue: '',
       formArrayItems: [
         {
           name: 'weaponType',
           type: 'select',
-          placeholder: 'Weapon Type',
+          placeholder: 'notifyWeapon.form.weaponType',
           defaultValue: '',
           size: 4,
           options: [
-            { value: 'Weapon', label: 'Weapon' },
-            { value: 'Bullet', label: 'Bullet' },
-            { value: 'Other', label: 'Other' },
+            { value: 'Weapon', label: 'notifyWeapon.form.options.Weapon' },
+            { value: 'Bullet', label: 'notifyWeapon.form.options.Bullet' },
+            { value: 'Other', label: 'notifyWeapon.form.options.Other' },
           ],
           validations: [{ type: 'required', value: true }],
         },
         {
           name: 'weaponName',
           type: 'text',
-          placeholder: 'Weapon Name',
+          placeholder: 'notifyWeapon.form.weaponName',
           defaultValue: '',
           size: 4,
           validations: [{ type: 'required', value: true }],
@@ -66,7 +66,7 @@ const notifyForm: Form = {
         {
           name: 'quantity',
           type: 'number',
-          placeholder: 'Quantity',
+          placeholder: 'notifyWeapon.form.quantity',
           defaultValue: '',
           size: 4,
           validations: [{ type: 'required', value: true }],
@@ -76,7 +76,7 @@ const notifyForm: Form = {
     {
       name: 'weaponDescription',
       type: 'text',
-      placeholder: 'Weapon Description',
+      placeholder: 'notifyWeapon.form.weaponDescription',
       defaultValue: '',
       size: 12,
       validations: [{ type: 'required', value: true }],
@@ -84,7 +84,7 @@ const notifyForm: Form = {
     {
       name: 'attachments',
       type: 'file',
-      placeholder: 'Attachments',
+      placeholder: 'notifyWeapon.form.attachments',
       defaultValue: '',
     },
   ],

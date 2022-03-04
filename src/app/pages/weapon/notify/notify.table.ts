@@ -4,13 +4,13 @@ import { TableState } from 'src/app/store/models/table.state';
 const baseApiUrl = 'http://localhost:3000';
 const dataSourceUrl = `${baseApiUrl}/notifies`;
 const actions: Array<Action> = [
-  { name: 'Expand', type: 'expand', path: 'notifies' },
-  { name: 'Edit', type: 'edit' },
+  { name: 'createNew.expand', type: 'expand', path: 'notifies' },
+  { name: 'createNew.edit', type: 'edit' },
 ];
 
 const notifyTableState: TableState = {
   id: 'notify table',
-  title: 'List of weapons that have been notified',
+  title: 'notifyItem.listofweaponsthathavebeennotified',
   pageNumber: 0,
   pageSize: 5,
   totalItems: 0,

@@ -3,7 +3,7 @@ import { TableState } from 'src/app/store/models/table.state';
 
 const baseApiUrl = 'http://localhost:3000';
 const dataSourceUrl = `${baseApiUrl}/notifyItems`;
-const actions: Array<Action> = [{ name: 'Edit', type: 'edit' }];
+const actions: Array<Action> = [{ name: 'createNew.edit', type: 'edit' }];
 
 const notifyItemsTableState: TableState = {
   id: 'notify items table',

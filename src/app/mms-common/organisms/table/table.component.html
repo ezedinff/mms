@@ -1,7 +1,7 @@
 <ng-container *ngIf="(tableState$ | async) as tableState"> 
   <mat-toolbar class="mat-elevation-z1 table-header">
     <div class="table-header-title">
-        <h1>{{tableState?.title}}</h1>
+        <h1>{{tableState?.title! | translate}}</h1>
     </div>
     <div class="table-header-actions">
         <button mat-icon-button>
@@ -17,7 +17,7 @@
 
         <button mat-button color="primary" (click)="command({type: 'create', name: 'Create New'}, undefined)">
           <mat-icon>add</mat-icon>
-          Create New
+          {{'formAction.createNew' | translate}}
         </button>
     </div>
 </mat-toolbar>
@@ -31,7 +31,7 @@
 <ng-container *ngIf="tableState.data?.length; else noRecordTemplate;">
   <mat-table *ngIf="!loading" #table [dataSource]="dataSource" class="mat-elevation-z1">
     <ng-container *ngFor="let column of columns;" [cdkColumnDef]="column.columnDef">
-      <mat-header-cell *cdkHeaderCellDef>{{ column.header }}</mat-header-cell>
+      <mat-header-cell *cdkHeaderCellDef>{{ column.header | translate}}</mat-header-cell>
       <mat-cell *cdkCellDef="let row; let i = index">
         <span class="mobile-label">{{ column.header }}:</span>
         <ng-container *ngIf="row && column.cell(row)">
@@ -48,7 +48,7 @@
           </button>
           <mat-menu #menu="matMenu" xPosition="before">
             <ng-container *ngFor="let action of tableState?.actions">
-              <button mat-menu-item (click)="command(action, row)">{{action.name}}</button>
+              <button mat-menu-item (click)="command(action, row)">{{action.name | translate}}</button>
             </ng-container>
           </mat-menu>
         </ng-container>
