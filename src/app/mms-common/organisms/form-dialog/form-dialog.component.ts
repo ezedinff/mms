@@ -1,7 +1,6 @@
-import { Component, Inject, Input, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Form } from '../../models/form';
-import { CrudHttpService } from './crudHttp.service';
 import formActions from '../../../store/actions/form.actions';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../../store/models/app.state';
@@ -22,7 +21,7 @@ interface FormProps {
 })
 export class FormDialogComponent implements OnInit {
   form!: Form;
-  actionTitle = 'save';
+  actionTitle = 'createNew.create';
   dataSourceUrl!: string;
   actionType!: ActionType;
   loading$ = this.store$.select((state) => state.form.status === 'PENDING');

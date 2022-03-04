@@ -45,7 +45,8 @@
             "edit":"ማሻሻል",
             "create": "ጨምር",
             "update": "በሌላ ለመተካት",
-            "cancel": "ውጣ"           
+            "cancel": "ውጣ",
+            "add":"ጨምር"           
         },
 
     
@@ -65,6 +66,7 @@
     },
     "notifyWeapon": {
         "form": {
+        "notifyWeapon":"አዲስ የሚገቡ እቃዎች ማሳወቂያ",
         "notifyItems": "አዲስ የሚገቡ እቃዎች ዝርዝር",
         "weaponType": "የጦር መሳሪያው አይነት",
         "options":{
