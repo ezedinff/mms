@@ -166,7 +166,8 @@ export class TableComponent implements OnInit, AfterViewInit {
             excludedColumns ?? []
           );
           this.displayedColumns = this.tableService.getDisplayedColumns(
-            this.columns
+            this.columns,
+            this.form.title
           );
         }
         if (currentSize && data) {

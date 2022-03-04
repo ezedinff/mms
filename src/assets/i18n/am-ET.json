@@ -26,8 +26,7 @@
   
       "formAction": {
           "createNew": "አዲስ ፍጠር",
-          "noRecordFound": "ምንም መዝገብ አልተገኘም!",
-          "no": "ተ.ቁ"
+          "noRecordFound": "ምንም መዝገብ አልተገኘም!"
         },
 
     "menus": {
@@ -77,7 +76,8 @@
         "weaponName": "የጦር መሳሪያ ስም",
         "quantity": "ብዛት",        
         "weaponDescription":"መግለጫ",
-        "attachments": "አባሪ ዶኩሜንት"
+        "attachments": "አባሪ ዶኩሜንት",
+        "No": "ተ.ቁ"
         }
     },
 

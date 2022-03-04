@@ -31,7 +31,7 @@
 <ng-container *ngIf="tableState.data?.length; else noRecordTemplate;">
   <mat-table *ngIf="!loading" #table [dataSource]="dataSource" class="mat-elevation-z1">
     <ng-container *ngFor="let column of columns;" [cdkColumnDef]="column.columnDef">
-      <mat-header-cell *cdkHeaderCellDef>{{ column.header }}</mat-header-cell>
+      <mat-header-cell *cdkHeaderCellDef>{{ column.header | translate}}</mat-header-cell>
       <mat-cell *cdkCellDef="let row; let i = index">
         <span class="mobile-label">{{ column.header }}:</span>
         <ng-container *ngIf="row && column.cell(row)">

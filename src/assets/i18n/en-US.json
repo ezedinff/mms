@@ -68,7 +68,8 @@
         "weaponName": "Weapon Name",
         "quantity": "Quantity",        
         "weaponDescription":"Weapon Description",
-        "attachments": "Attachments"
+        "attachments": "Attachments",
+        "No": "No"
         }
     },
 

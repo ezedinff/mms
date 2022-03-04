@@ -13,6 +13,7 @@ interface MatTableColumn {
 
 @Injectable({ providedIn: 'root' })
 export class TableService {
+  public title! :string;
   public pageSize = 5;
   public loading$!: Observable<boolean>;
   constructor(private httpClient: HttpClient) {}
@@ -33,10 +34,10 @@ export class TableService {
     return columns.map((column: any, index: number) => {
       return {
         columnDef: column,
-        header: column.replace(/([^A-Z])([A-Z])/g, '$1 $2'),
+        header:`${this.title}.${column}`, //column.replace(/([^A-Z])([A-Z])/g, '$1 $2'),
         cell: (element: any) =>
           `${
-            column === 'No'
+            column === 'no'
               ? ''
               : element && element[column]
               ? element[column]
@@ -46,7 +47,9 @@ export class TableService {
     });
   }
 
-  getDisplayedColumns(columns: Array<MatTableColumn>): Array<string> {
+  getDisplayedColumns(columns: Array<MatTableColumn>,title : string): Array<string> {
+    var splitTitle =title.split(".");
+    this.title = `${splitTitle[0]}.${splitTitle[1]}`
     return columns.map((c) => c.columnDef);
   }
 
