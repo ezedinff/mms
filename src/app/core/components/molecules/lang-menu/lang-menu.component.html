@@ -1,0 +1,19 @@
+<div class="toolbar-lang-container">
+    <button mat-button (click)="isOpen = !isOpen" class="toolbar-lang-btn" [class.open]="isOpen" [ngStyle.xs]="{'min-width': '70px'}">
+        <mat-icon>language</mat-icon>
+    </button>
+  
+    <div class="dropdown mat-elevation-z1" [class.open]="isOpen">
+      <div class="content" >
+        <mat-nav-list>
+          <mat-list-item (click)="changeLanguage('en-US')">
+            <a matLine >English</a>
+          </mat-list-item>
+          <mat-list-item (click)="changeLanguage('am-ET')">
+            <a matLine >አማርኛ</a>
+          </mat-list-item>
+        </mat-nav-list>
+      </div>
+    </div>
+  </div>
+  

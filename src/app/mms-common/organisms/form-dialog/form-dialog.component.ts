@@ -52,7 +52,7 @@ export class FormDialogComponent implements OnInit {
         action: this.actionType,
       },
     };
-    this.store$.dispatch(formActions.setSubmittingForm(f));
+    // this.store$.dispatch(formActions.setSubmittingForm(f));
 
     this.store$
       .select((state) => state.form)

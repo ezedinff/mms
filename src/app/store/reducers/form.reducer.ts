@@ -12,21 +12,6 @@ export const initialState: FormState = {
 };
 export const formReducer = createReducer(
   initialState,
-  on(formActions.setSubmittingForm, (state, { value }) => ({
-    ...state,
-    ...value,
-    status: 'PENDING',
-  })),
-  on(formActions.formSubmittingSuccess, (state, { value }) => ({
-    ...state,
-    response: value,
-    status: 'SUCCESS',
-  })),
-  on(formActions.formSubmittingFailure, (state, { value }) => ({
-    ...state,
-    response: value,
-    status: 'FAILED',
-  })),
   on(formActions.setUpdatingForm, (state, { value }) => ({
     ...state,
     updating: value,

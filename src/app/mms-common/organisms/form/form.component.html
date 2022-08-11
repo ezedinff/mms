@@ -128,13 +128,13 @@
               </ng-container>
 
 
-              <!-- FILE INPUT -->
+              <!-- FILE INPUT
               <ng-container *ngSwitchCase="'file'">
                 <mat-form-field class="hidden-input">
                   <input matInput hidden [formControlName]="element.name" />
                 </mat-form-field>
                 <app-file-input (onUploadingFinish)="setFileControl($event, element.name)" [title]="element.placeholder"></app-file-input>
-              </ng-container>
+              </ng-container> -->
 
             </div>
           </div>
@@ -275,12 +275,12 @@
 
 
         <!-- FILE INPUT -->
-        <ng-container *ngSwitchCase="'file'">
+        <!-- <ng-container *ngSwitchCase="'file'">
           <mat-form-field class="hidden-input">
             <input matInput hidden [formControlName]="element.name" />
           </mat-form-field>
           <app-file-input (onUploadingFinish)="setFileControl($event, element.name)" [title]="element.placeholder"></app-file-input>
-        </ng-container>
+        </ng-container> -->
 
 
         <!-- HIDDEN INPUT -->

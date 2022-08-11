@@ -5,11 +5,8 @@ import {
   PerfectScrollbarConfigInterface,
   PerfectScrollbarModule,
 } from 'ngx-perfect-scrollbar';
-import { SideNavComponent } from './molecules/side-nav/side-nav.component';
-import { SideNavItemComponent } from './molecules/side-nav-item/side-nav-item.component';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
-import { LayoutComponent } from './templates/layout/layout.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -17,7 +14,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { UserMenuComponent } from './molecules/user-menu/user-menu.component';
 import { FormComponent } from './organisms/form/form.component';
 import { LoadingButtonComponent } from './atoms/loading-button/loading-button.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -37,10 +33,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { FormDialogComponent } from './organisms/form-dialog/form-dialog.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { HttpClientModule } from '@angular/common/http';
-import { FileInputComponent } from './atoms/file-input/file-input.component';
+import { FileInputComponent } from '../core/components/atoms/inputs/file-input/file-input.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { DndDirective } from './atoms/file-input/dnd.directive';
+import { DndDirective } from '../core/components/atoms/inputs/file-input/dnd.directive';
 import { BasicComponent } from './templates/basic/basic.component';
 import { RouterModule } from '@angular/router';
 import { CrudHttpService } from './organisms/form-dialog/crudHttp.service';
@@ -53,16 +49,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
 @NgModule({
   declarations: [
-    SideNavComponent,
-    SideNavItemComponent,
-    LayoutComponent,
-    UserMenuComponent,
     FormComponent,
     LoadingButtonComponent,
     TableComponent,
     FormDialogComponent,
-    FileInputComponent,
-    DndDirective,
     BasicComponent,
   ],
   imports: [
@@ -105,11 +95,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     },
     CrudHttpService,
   ],
-  exports: [
-    LayoutComponent,
-    FormComponent,
-    LoadingButtonComponent,
-    BasicComponent,
-  ],
+  exports: [FormComponent, LoadingButtonComponent, BasicComponent],
 })
 export class MmsCommonModule {}

@@ -1,0 +1,8 @@
+<div class="container">
+  <img src="/assets/img/logo.PNG" alt="Ethiopian Federal Police Commission" width="96"  />
+</div>
+<perfect-scrollbar style="height: calc(100vh - 16em); padding-top: 2em;">
+  <ng-container *ngFor="let menu of menus">
+    <app-side-nav-item [menu]="menu"></app-side-nav-item>
+  </ng-container>
+</perfect-scrollbar>

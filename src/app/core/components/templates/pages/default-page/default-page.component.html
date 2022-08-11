@@ -1,0 +1,3 @@
+<ng-container *ngIf="(page$ | async) as page">
+    <app-table *ngFor="let table of page?.tables; trackBy: identify" [tableId]="table.id"></app-table>
+</ng-container>

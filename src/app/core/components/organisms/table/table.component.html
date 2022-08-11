@@ -1,0 +1,105 @@
+<ng-container *ngIf="(table$ | async) as table">
+    <ng-container *ngTemplateOutlet="tableHeader; context: { table: table }"></ng-container>
+    <ng-container *ngTemplateOutlet="tableBody; context: { table: table }"></ng-container>
+</ng-container>
+
+
+<ng-template #paginator let-paginated="paginated">
+    <mat-paginator *ngIf="paginated" [pageSizeOptions]="[10, 15, 20]"
+    (page)="pageChange($event)"
+    showFirstLastButtons
+    aria-label="Select page">
+    </mat-paginator>
+</ng-template>
+
+<ng-template #loadingTemplate let-loading="loading">
+  <div *ngIf="loading" style="display: flex; justify-content: center; padding: 24px">
+    <mat-progress-spinner
+      strokeWidth="3"
+      diameter="50"
+      mode="indeterminate"></mat-progress-spinner>
+  </div>
+</ng-template>
+
+
+<ng-template #noRecordTemplate>
+    <mat-card>
+      <mat-card-content>
+        <div class="no-record-found">
+          <img src="assets/img/no-record.svg" alt="No Record Found">
+          <h1>No Record Found!</h1>
+        </div>
+      </mat-card-content>
+    </mat-card>
+</ng-template>
+  
+
+<ng-template #tableHeader let-table="table">
+    <mat-toolbar class="mat-elevation-z1 table-header">
+        <div class="table-header-title">
+            <h1>{{table?.title}}</h1>
+        </div>
+        <div *ngIf="table.headerActions" class="table-header-actions">
+            <button
+            *ngFor="let action of table.headerActions"
+            mat-icon-button
+            matTooltip="{{action?.name}}"
+            color="primary"
+            (click)="command(action, undefined)">
+              <mat-icon>{{action?.icon}}</mat-icon>
+              <span>{{action?.label}}</span>
+            </button>
+        </div>
+    </mat-toolbar>
+</ng-template>
+
+<ng-template #tableBody let-table="table">
+  <mat-card style="padding: 0;">
+    <mat-card-content >
+      <ng-container *ngTemplateOutlet="loadingTemplate; context: {loading: table.isLoading}"></ng-container>
+
+      <ng-container *ngIf="!table.isLoading">
+        <ng-container *ngIf="table.data.length">
+          <ng-container *ngTemplateOutlet="tableContent; context: { table: table }"></ng-container>
+        </ng-container>
+    
+        <ng-container *ngIf="!table.data.length">
+          <ng-container *ngTemplateOutlet="noRecordTemplate"></ng-container>
+        </ng-container>
+      </ng-container>
+    </mat-card-content>
+  </mat-card>
+</ng-template>
+
+
+<ng-template #tableContent let-table="table">
+  <mat-table #tableVar [dataSource]="table.data">
+    <ng-container *ngFor="let column of table.columns;" [cdkColumnDef]="column.columnDef">
+      <mat-header-cell *cdkHeaderCellDef>{{ column.header }}</mat-header-cell>
+      <mat-cell *cdkCellDef="let row; let i = index">
+        <span class="mobile-label">{{ column.header }}:</span>
+        <ng-container *ngIf="row && column.cell(row)">
+          {{ column.columnDef === 'date' ? (column.cell(row) | date) :  column.cell(row)}}
+        </ng-container>
+  
+        <ng-container *ngIf="!column.cell(row) && column.columnDef == 'No'">
+          {{(i + 1)}}
+        </ng-container>
+  
+        <ng-container *ngIf="!column.cell(row) && column.columnDef == ' ' && table?.actions">
+          <button mat-icon-button color="primary" [matMenuTriggerFor]="menu">
+            <mat-icon>more_horiz</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" xPosition="before">
+            <ng-container *ngFor="let action of table?.actions">
+              <button mat-menu-item (click)="command(action, row)">{{action.name}}</button>
+            </ng-container>
+          </mat-menu>
+        </ng-container>
+      </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="table.displayedColumns"></mat-header-row>
+    <mat-row [ngClass.gt-sm]="{'clickable-mat-row': true}" *matRowDef="let row; columns: table.displayedColumns;"></mat-row>
+  </mat-table>
+  <ng-container *ngTemplateOutlet="paginator; context: { paginated: table.paginated }"></ng-container>
+</ng-template>

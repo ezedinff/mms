@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { MmsCommonModule } from '../../mms-common/mms-common.module';
+import { LayoutModule } from 'src/app/core/components/templates/layout/layout.module';
 
 const routes: Routes = [
   {
@@ -15,9 +16,9 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
-        path: 'weapon',
+        path: 'weapons',
         loadChildren: () =>
-          import('../weapon/weapon.module').then((m) => m.WeaponModule),
+          import('../weapons/weapons.module').then((m) => m.WeaponsModule),
       },
       {
         path: 'dashboard',
@@ -32,6 +33,6 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [AdminComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), MmsCommonModule],
+  imports: [CommonModule, RouterModule.forChild(routes), LayoutModule],
 })
 export class AdminModule {}

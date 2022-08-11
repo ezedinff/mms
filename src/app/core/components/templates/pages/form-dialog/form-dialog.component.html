@@ -1,0 +1,27 @@
+<mat-toolbar class="mat-toolbar-custom">
+    <h3 class="title">{{inputData.title}}</h3>
+</mat-toolbar>
+
+<mat-dialog-content>
+    <app-form 
+            [form]="inputData.form"
+            (onFormSubmit)="onSubmit($event)"
+            #formComponent>
+    </app-form>
+</mat-dialog-content>
+
+<mat-dialog-actions class="actions">
+    <ng-container *ngFor="let action of inputData.actions">
+        <ng-container *ngIf="action.action === 'submit'">
+            <button mat-button type="submit" (click)="formComponent.submit()">
+                {{action.label}}
+            </button>
+        </ng-container>
+
+        <ng-container *ngIf="action.action === 'close'">
+            <button mat-button type="button" color="warn" mat-dialog-close tabindex="1">
+                {{action.label}}
+            </button>
+        </ng-container>
+    </ng-container>
+</mat-dialog-actions>
